@@ -11,6 +11,7 @@ import types from './types';
 
 export function* signInRequest({ payload }) {
   try {
+    NavigationService.navigate('RegulationReview');
     const { email, password } = payload;
 
     const response = yield call(signin, email, password);
